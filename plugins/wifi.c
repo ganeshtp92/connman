@@ -1243,7 +1243,7 @@ static void scan_callback(int result, GSupplicantInterface *interface,
 				CONNMAN_SERVICE_TYPE_WIFI, false);
 	}
 
-	if (result != -ENOLINK)
+	if (result != -ENOLINK && !wifi->connected)
 		start_autoscan(device);
 
 	/*
